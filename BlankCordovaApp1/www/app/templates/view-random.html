@@ -1,0 +1,20 @@
+﻿<ion-view view-title="Watdo - Random">
+    <ion-content class="padding">
+        <ion-refresher on-refresh="refresh(true)" spinner="android"></ion-refresher>
+        <ion-list>
+            <ion-item item="item" class="item-text-wrap" ng-repeat="location in locations | filter:{Type: 'Random' }">
+                <b>{{location.Name}} </b> <span class="item-note">Rating: {{location.Rating}}</span>
+                <hr />
+                <span class="item-note">{{location.Address}}</span>
+                <img src="{{location.Image}}" width="250px;" />
+                <br />
+                <br />
+                <p style="word-wrap:break-word;">{{location.Description}}</p>
+                <br />
+                <hr />
+                <span class="item-note">Distance:{{location.Distance}}</span>
+                <br />
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
